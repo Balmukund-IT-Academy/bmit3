@@ -44,7 +44,7 @@ const HomePage = () => {
         <div className='w-full flex items-center justify-center'>
           <div className='flex flex-col gap-4'>
             <Typography size="xxl" weight="medium" color="darkGray">
-              Let's
+              {`Let's`}
             </Typography>
             <Typography size="xxxxl" weight="bold" color="blue">
               Learn Coding
