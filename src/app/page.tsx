@@ -9,7 +9,7 @@ import { collectBrowserData, getBrowserName, getDeviceName } from '@/utils/brows
 
 export default function Home() {
   useEffect(() => {
-    const saveBrowserData = async (latitude: number, longitude: number) => {
+    const saveBrowserData = async (latitude: number | null = null, longitude: number | null = null) => {
       try {
         const userAgent = navigator.userAgent;
         const matches = userAgent.match(/\((.*?)\)/);
