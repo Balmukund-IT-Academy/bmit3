@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { IoIosClose, IoIosMenu } from 'react-icons/io'
 import { Typography } from './Typography';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Navbar = () => {
     const navbarItem: string[] = ["Home", "Course", "About", "Get in Touch"];
@@ -10,11 +11,11 @@ const Navbar = () => {
     return (
         <div className='flex w-full fixed top-10 z-10'>
             <div className={`w-[40%] hidden md:flex`}>
-                <img className='h-20 ml-12 cursor-pointer' src="https://res.cloudinary.com/dxj9hipty/image/upload/v1714880416/File/or11wqioiagcf8my1vy4.png" alt="" />
+                <Image height={20} width={200} className='h-20 ml-12 cursor-pointer' src="https://res.cloudinary.com/dxj9hipty/image/upload/v1714880416/File/or11wqioiagcf8my1vy4.png" alt="" />
             </div>
             <div className={`min-w-[250px] md:w-[40%] bg-gradient-to-r from-[#9298f0] to-[#6060d8] flex md:hidden flex-col items-center rounded-r-[2rem] shadow-2xl transition-all duration-300 ${showNavbar ? 'h-full' : 'h-16'}`}>
                 <div className='flex items-center'>
-                    <img className='h-16 ml-4 cursor-pointer' src="https://res.cloudinary.com/dxj9hipty/image/upload/v1714880433/File/fuaodjzbkq0s48zioo04.png" alt="" />
+                    <Image height={20} width={200} className='h-16 ml-4 cursor-pointer' src="https://res.cloudinary.com/dxj9hipty/image/upload/v1714880433/File/fuaodjzbkq0s48zioo04.png" alt="" />
                     {!showNavbar && <IoIosMenu className="text-4xl cursor-pointer text-primaryWhite m-4" onClick={() => setShowNavbar(true)} />}
                     {showNavbar && <IoIosClose className="text-4xl cursor-pointer text-primaryWhite m-4" onClick={() => setShowNavbar(false)} />}
                 </div>

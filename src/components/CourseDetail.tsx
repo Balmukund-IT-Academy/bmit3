@@ -1,5 +1,5 @@
 'use client';
-import { FC, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { courseApi, CourseType } from '../api/course';
 import { Typography } from './Typography';
 import { IoIosArrowForward } from 'react-icons/io';
@@ -77,7 +77,9 @@ const CourseDetail = () => {
     <div className="flex justify-center p-6">
       <div className="max-w-5xl w-full bg-white rounded-lg shadow-lg overflow-hidden">
         <div className="relative md:h-72 sm:h-56 h-40">
-          <img
+          <Image
+            height={20}
+            width={20}
             className="w-full h-full object-cover object-center"
             src={course.image}
             alt={course.name}

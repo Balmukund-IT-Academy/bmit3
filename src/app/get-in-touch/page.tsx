@@ -1,6 +1,7 @@
 'use client'
 import { Typography } from '@/components/Typography';
 import { supabase } from '@/utils/supabase';
+import Image from 'next/image';
 import React, { useState } from 'react';
 
 const GetInTouch: React.FC = () => {
@@ -17,7 +18,7 @@ const GetInTouch: React.FC = () => {
                 { name, mobile: mobileNumber, email, message }
             ]);
         if (error) {
-            setError('Please try again!');            
+            setError('Please try again!');
         }
         else {
             setError('');
@@ -52,7 +53,9 @@ const GetInTouch: React.FC = () => {
                 </div>
                 <div>
                     <div className='flex items-center justify-center'>
-                        <img
+                        <Image
+                            height={500}
+                            width={400}
                             className='hidden md:block h-96 w-2/3 object-contain'
                             src="https://res.cloudinary.com/dxj9hipty/image/upload/v1717252543/File/Untitled_design_4_alk2gg.png"
                             alt="Contact illustration"

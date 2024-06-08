@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Typography } from './Typography';
+import Image from 'next/image';
 
 const steps = [
     { title: "Latest Curriculum", image: 'https://res.cloudinary.com/dxj9hipty/image/upload/v1716775260/BMIT/1_zalp0y.png', description: "We offer courses for both beginners and advanced learners, covering Web Development, Web Design, C++, Data Structures, and Algorithms (DSA)." },
@@ -24,7 +25,7 @@ const WhyChooseUs: React.FC = () => {
                         transition={{ duration: 0.5 }}
                         className="bg-white p-6 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-115 flex flex-col items-center"
                     >
-                        <img src={step.image} alt={step.title} className="w-20 h-20 md:w-40 md:h-40 object-cover rounded-md mb-4" />
+                        <Image height={20} width={10} src={step.image} alt={step.title} className="w-20 h-20 md:w-40 md:h-40 object-cover rounded-md mb-4" />
                         <Typography size={'xl'} weight={'bold'}>{step.title}</Typography>
                         <Typography size={'md'} className='text-center'>{step.description}</Typography>
                     </motion.div>

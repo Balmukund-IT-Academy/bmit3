@@ -1,6 +1,7 @@
 import { WhatYouWillLearnApi } from '../api/whatYouWillLearn';
 import ReactParallaxTilt from 'react-parallax-tilt';
 import { Typography } from './Typography';
+import Image from 'next/image';
 
 const WhatYouWillLearn = () => {
     return (
@@ -16,7 +17,7 @@ const WhatYouWillLearn = () => {
                                 gyroscope={true}
                                 scale={1.02}>
                                 <div className='flex flex-col items-center md:min-w-72 min-w-28 ring-2 bg-slate-100 rounded-lg p-4 gap-2'>
-                                    <img src={item.image} alt={item.name} className='md:w-32 w-16' />
+                                    <Image height={20} width={10} src={item.image} alt={item.name} className='md:w-32 w-16' />
                                     <Typography size={'lg'}>{item.name}</Typography>
                                 </div>
                             </ReactParallaxTilt>

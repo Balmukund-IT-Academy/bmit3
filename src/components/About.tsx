@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactParallaxTilt from 'react-parallax-tilt'
 import { Typography } from './Typography'
+import Image from 'next/image'
 
 const About = () => {
   return (
@@ -13,7 +14,7 @@ const About = () => {
       <div className='w-full flex items-center justify-center'>
         <div className='w-11/12 bg-[#e3f9ff45] hover:bg-[#effcff9c] border-2 rounded-2xl flex transition-all duration-300 flex-col md:flex-row'>
           <div className='flex w-full'>
-            <div className='md:p-8 p-4 w-full rounded-xl overflow-hidden'><img className='w-full rounded-xl object-cover' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvxXRj6p-RWwSGVxOSwgmOOQ7YV09hZFIXkw&s" alt="" /></div>
+            <div className='md:p-8 p-4 w-full rounded-xl overflow-hidden'><Image height={20} width={20} className='w-full rounded-xl object-cover' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvxXRj6p-RWwSGVxOSwgmOOQ7YV09hZFIXkw&s" alt="" /></div>
           </div>
           <div className='flex w-full'>
             <div className='md:p-8 p-4 flex flex-col gap-4'>

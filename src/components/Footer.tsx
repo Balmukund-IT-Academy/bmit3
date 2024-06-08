@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Typography } from "./Typography";
 
 const Footer = () => {
@@ -6,7 +7,7 @@ const Footer = () => {
             <div className='w-11/12 flex md:flex-row flex-col'>
                 <div className='flex flex-col w-full'>
                     <div>
-                        <img src="https://res.cloudinary.com/dxj9hipty/image/upload/fl_preserve_transparency/v1714880433/File/fuaodjzbkq0s48zioo04.jpg?_s=public-apps" alt="" className='h-24' />
+                        <Image height={20} width={300} src="https://res.cloudinary.com/dxj9hipty/image/upload/fl_preserve_transparency/v1714880433/File/fuaodjzbkq0s48zioo04.jpg?_s=public-apps" alt="" className='h-24' />
                     </div>
                 </div>
                 <div className='flex flex-col w-full gap-2'>
