@@ -78,8 +78,8 @@ const CourseDetail = () => {
       <div className="max-w-5xl w-full bg-white rounded-lg shadow-lg overflow-hidden">
         <div className="relative md:h-72 sm:h-56 h-40">
           <Image
-            height={20}
-            width={20}
+            height={300}
+            width={500}
             className="w-full h-full object-cover object-center"
             src={course.image}
             alt={course.name}
