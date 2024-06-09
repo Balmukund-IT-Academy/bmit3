@@ -90,11 +90,6 @@ export default function Home() {
 
   return (
     <div>
-      <Head>
-        <link rel="icon" href="/favicon/favicon.ico"/>
-        <title>Balmukund IT Academy</title>
-        <meta property="og:title" content="Balmukund IT Academy" key="title" />
-      </Head>
       <HomePage />
       <WhyChooseUs />
       <AllCourse />

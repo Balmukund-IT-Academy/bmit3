@@ -11,7 +11,8 @@ const GetInTouch: React.FC = () => {
     const [mobileNumber, setMobileNumber] = useState('');
     const [error, setError] = useState('');
 
-    const handleSubmit = async () => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
         const { error } = await supabase
             .from('contact_us')
             .insert([
@@ -107,16 +108,15 @@ const GetInTouch: React.FC = () => {
                                     rows={4}
                                     value={message}
                                     onChange={(e) => setMessage(e.target.value)}
-                                    required
                                     className="w-full px-4 py-2 rounded-3xl border border-gray-300 focus:outline-none ring-1 focus:ring-2 ring-gradientFrom focus:gradientFrom focus:border-transparent shadow-md shadow-gradientFrom"
                                     placeholder="Message"
                                 ></textarea>
                             </div>
-                            <div className='text-xl font-bold rounded-full px-1 py-1 bg-gradient-to-r from-gradientFrom to-gradientTo hover:text-white transition-all duration-300 hover:shadow-xl cursor-pointer' onClick={handleSubmit}>
+                            <button className='w-full text-xl font-bold rounded-full px-1 py-1 bg-gradient-to-r from-gradientFrom to-gradientTo hover:text-white transition-all duration-300 hover:shadow-xl cursor-pointer'>
                                 <div className='text-center text-buttonText text-lg md:text-xl font-bold rounded-full px-3 md:px-6 py-1 bg-white hover:bg-gradient-to-r from-gradientFrom to-gradientTo hover:text-white transition-all duration-300'>
                                     Submit
                                 </div>
-                            </div>
+                            </button>
                             {error && <Typography size={'sm'} color={'red'}>{error}</Typography>}
                         </form>
                     </div>
