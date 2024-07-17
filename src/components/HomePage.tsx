@@ -73,7 +73,7 @@ const HomePage = () => {
         </div>
         <div className='w-full flex items-center justify-center'>
           <Image height={800} width={500}
-            className='md:max-h-[70%] md:max-w-[90%] max-h-[50%] max-w-[70%]'
+            className='md:max-h-[70%] md:max-w-[90%] max-h-[50%] max-w-[70%] object-contain'
             src='https://res.cloudinary.com/dxj9hipty/image/upload/v1711718018/File/Untitled_design_1_evdol8.png'
             alt='Coding Illustration'
           />

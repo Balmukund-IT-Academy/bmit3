@@ -15,7 +15,7 @@ const Navbar = () => {
             </div>
             <div className={`min-w-[250px] md:w-[40%] bg-gradient-to-r from-[#9298f0] to-[#6060d8] flex md:hidden flex-col items-center rounded-r-[2rem] shadow-2xl transition-all duration-300 ${showNavbar ? 'h-full' : 'h-16'}`}>
                 <div className='flex items-center'>
-                    <Image height={100} width={250} className='h-16 ml-4 cursor-pointer' src="https://res.cloudinary.com/dxj9hipty/image/upload/v1714880433/File/fuaodjzbkq0s48zioo04.png" alt="" />
+                    <Image height={100} width={250} className='h-16 ml-4 cursor-pointer object-cover' src="https://res.cloudinary.com/dxj9hipty/image/upload/v1714880433/File/fuaodjzbkq0s48zioo04.png" alt="" />
                     {!showNavbar && <IoIosMenu className="text-4xl cursor-pointer text-primaryWhite m-4" onClick={() => setShowNavbar(true)} />}
                     {showNavbar && <IoIosClose className="text-4xl cursor-pointer text-primaryWhite m-4" onClick={() => setShowNavbar(false)} />}
                 </div>
